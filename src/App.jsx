@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Zap, Users, Rocket, Wallet, Unlock, Gamepad2, ArrowRight, ArrowLeft, ShoppingCart, Star, ExternalLink } from 'lucide-react';
+import { Zap, Users, Rocket, Wallet, Unlock, Gamepad2, ArrowRight, ArrowLeft, ShoppingCart, Star, ExternalLink, Send } from 'lucide-react';
 import { config } from './config';
 
 // --- Components ---
@@ -87,15 +87,27 @@ const HomePage = () => {
               <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
             </Link>
 
-            <a 
-              href={config.useNowUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex justify-center items-center gap-2 bg-zinc-800/50 text-zinc-300 border border-zinc-700 hover:bg-zinc-800 hover:text-white hover:border-zinc-600 px-8 py-3.5 rounded-lg font-bold transition-all active:scale-95"
-            >
-              <span>立即使用</span>
-              <ExternalLink size={18} className="opacity-70 group-hover:opacity-100 transition-opacity" />
-            </a>
+            <div className="flex gap-3 w-full">
+              <a 
+                href="https://t.me/earthsworth"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 group inline-flex justify-center items-center gap-2 bg-zinc-800/50 text-zinc-300 border border-zinc-700 hover:bg-[#229ED9] hover:text-white hover:border-[#229ED9] px-4 py-3.5 rounded-lg font-bold transition-all active:scale-95"
+              >
+                <span>Telegram</span>
+                <Send size={18} className="opacity-70 group-hover:opacity-100 transition-opacity" />
+              </a>
+
+              <a 
+                href={config.useNowUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 group inline-flex justify-center items-center gap-2 bg-zinc-800/50 text-zinc-300 border border-zinc-700 hover:bg-zinc-800 hover:text-white hover:border-zinc-600 px-4 py-3.5 rounded-lg font-bold transition-all active:scale-95"
+              >
+                <span>立即使用</span>
+                <ExternalLink size={18} className="opacity-70 group-hover:opacity-100 transition-opacity" />
+              </a>
+            </div>
           </div>
         </div>
 
@@ -233,12 +245,12 @@ const ShopsPage = () => {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shops" element={<ShopsPage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
