@@ -5,7 +5,7 @@ export const config = {
   // 卡网列表 (会自动随机排序)
   shops: [
     { name: "钟意卡网", url: "https://shop.zhongy.shop/item/86" },
-    { name: "Atri卡网", url: "https://shop.atri.cards/item?id=260" },
+    { name: "Atri卡网", url: "https://shop1.atrishop.autos/item?id=260" },
     { name: "爱发电", url: "https://afdian.com/item/2ef6a43cf78811f084b752540025c377" },
     { name: "SL1me's Shop", url:"https://shop.nekorua.com/" },
     { name: "RoseShop卡网", url:"https://roseshop.asia/item/83" }
