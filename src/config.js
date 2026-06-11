@@ -4,7 +4,7 @@ export const config = {
 
     // 卡网列表 (会自动随机排序)
     shops: [
-        { name: "Atri卡网", url: "https://shop1.atrishop.autos/item?id=260" },
+        { name: "Atri卡网", url: "https://shop.atrishop.autos/product?id=260" },
         { name: "爱发电", url: "https://ifdian.net/item/2ef6a43cf78811f084b752540025c377" },
         { name: "NekoALTs", url: "https://nekoalts.wtf/" },
     ],
